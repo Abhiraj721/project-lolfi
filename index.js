@@ -5,6 +5,9 @@ var checkrain=0;
 document.querySelector(".playbtn").innerHTML="<i class='fa fa-play'></i>"
 var x=new Audio("/beats/beat"+0+".mp3");
 var a=0;
+let details = navigator.userAgent;
+let regexp = /android|iphone|kindle|ipad/i;
+let isMobileDevice = regexp.test(details);
 
 x.addEventListener("ended", function() {
     console.log("um")
@@ -73,6 +76,7 @@ function audiopause(){
     isplaying=false
 }
 ////dragelement
+if(isMobileDevice==false){
 dragElement(document.getElementById("mydiv"));
 
 function dragElement(elmnt) {
@@ -113,5 +117,36 @@ function dragElement(elmnt) {
     // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
+  }
+}
+}
+else{
+  window.onload = function() {
+    // find the element that you want to drag.
+    var box = document.getElementById('mydiv');
+    
+    /* listen to the touchMove event,
+    every time it fires, grab the location
+    of touch and assign it to box */
+    
+    box.addEventListener('touchmove', function(e) {
+      // grab the location of touch
+      var touchLocation = e.targetTouches[0];
+      
+      // assign box new coordinates based on the touch.
+      mydiv.style.left = touchLocation.pageX + 'px';
+      mydiv.style.top = touchLocation.pageY + 'px';
+    })
+    
+    /* record the position of the touch
+    when released using touchend event.
+    This will be the drop position. */
+    
+    box.addEventListener('touchend', function(e) {
+      // current box position.
+      var x = parseInt(mydiv.style.left);
+      var y = parseInt(mydiv.style.top);
+    })
+    
   }
 }
