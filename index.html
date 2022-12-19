@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <center>
+    <button onClick="changebeatback()"><i class="fa fa-fast-backward"></i></button>
+    <button class="playbtn" onClick="main()"></button>
+    <button class="playbtn" onClick="changebeatforw()"><i class="fa fa-fast-forward"></i></button><br>
+    Volume :<input type="range" oninput="sliderChange(this.value)" min="0" max="100"  class="slider" id="myRange"></center> 
+    <div id="mydiv">
+        <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+        <div id="mydivheader">Mixer</div>
+
+    <label for="mailId[]"> Rain</label>
+               <input oninput="onInput(this)" class="messageCheckbox" type="checkbox" value="3" name="mailId[]"><input type="range"oninput="rainvolume(this.value)" min="0" max="100"  class="slider" id="myRange">
+      </div>
+   <script src="index.js"></script>
+</body>
+</html>
