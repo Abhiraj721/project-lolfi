@@ -1,47 +1,144 @@
 body{
-    background-image: url("nice.jpg");
-      color:black;
-    background-repeat: no-repeat;
-  background-size:cover;
-  /*overflow-x: 10%;*/
-  margin: 0px;
-  position: sticky;
-  align-items: center;
-  text-align: center;
-  height: 780px;
-  width: 100%;
-    
-  /* background-attachment: fixed; */
-  background-position: center center;
-  
-  
-  }
-  .non{
-      visibility: hidden;
-  }
-  .main{
-    background-color:transparent;
+    background-image: url("https://i.gifer.com/2swA.gif");
+    height: 100vh;
+    padding:0;
+    margin:0;
+background-repeat: no-repeat;
+background-size: 100%;
+    /* background-attachment: fixed; */
+   
+}
+.logo{
+  margin-left: -280px;
+  width: 47px;
+}
+.volgrp{
+  background-color: #000000;
+  opacity: 0.7;
+}
+.row{
+  background-color: black;
+  opacity: 0.8;
 
-  }
-  .captions{
-      color: black;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
-  /* .box{
-      background-color:rgb(255, 255, 255);
-      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #000000;
-  } */
-  input, textarea {
-    background-color: transparent;
-    text-shadow: 0vh;
-  }
-  .heading{
-      font-size: 35px;
+}
+.time{
+  color: white;
+  background-color: #252424;
+  margin: 7px;
+}
+.btnmin button{
+  background-color: #000000;
+  opacity: 0.7;
+ height: 29px;
+}
+.btnmin button img{
+  width: 14px;
+}
+#mydiv {
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    text-align: center;
  
   }
-  .heading h1{
-    background-color:transparent;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-          backdrop-filter: blur(8px);
+ 
+  
+  #mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
   }
+  input[type=range] {
+   
+    margin: 13.2px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    background: #928483;
+    border: 0.7px solid #562425;
+    border-radius: 6.2px;
+    width: 100%;
+    height: 12.6px;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    margin-top: -1px;
+    width: 19px;
+    height: 13px;
+    background: #731817;
+    border: 2.2px solid #000000;
+    border-radius: 2px;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #9e9191;
+  }
+  input[type=range]::-moz-range-track {
+    background: #928483;
+    border: 0.7px solid #562425;
+    border-radius: 6.2px;
+    width: 100%;
+    height: 12.6px;
+    cursor: pointer;
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 19px;
+    height: 39px;
+    background: #731817;
+    border: 2.2px solid #000000;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 14.2px 0;
+    color: transparent;
+    width: 100%;
+    height: 12.6px;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #867776;
+    border: 0.7px solid #562425;
+    border-radius: 12.4px;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #928483;
+    border: 0.7px solid #562425;
+    border-radius: 12.4px;
+  }
+  input[type=range]::-ms-thumb {
+    width: 19px;
+    height: 39px;
+    background: #731817;
+    border: 2.2px solid #000000;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-top: 0px;
+    /*Needed to keep the Edge thumb centred*/
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #928483;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #9e9191;
+  }
+  /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+  how to remove the virtical space around the range input in IE*/
+  @supports (-ms-ime-align:auto) {
+    /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+    input[type=range] {
+      margin: 0;
+      /*Edge starts the margin from the thumb, not the track as other browsers do*/
+    }
+  }
+ 

@@ -2,52 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scgpa to cgpa converter</title>
-    <div class="container heading">
-        <center>
-        <h1 style="color: white;">Scgpa to cgpa converter</h1>
-    </center>
-</div>
-    <br><br>
-    <center>
-        <br><br><br><br><br><br>
-        <div class="container-fluid main" >
-    <form name="main" >
-        <table>
-            <tr>
-                <td>
-        <span class="captions">Sum of all scgpa : </span><input type="text" name="sumofallsems">
-    </td>
-    </tr>
-        <br>
-        <tr>
-            <td>
-                <br>
-        <span class="captions">   No.of semester : </span><input type="text"   name="no_ofsems" >
-    </td>
-    </tr>
-    <tr>
-        <td>
-            <br>
-  <input type="button" class="btn btn-danger"  value="Calculate" onClick="helper()" > 
-        </td>
-    </tr>
-    </table>
-
-    </form>
-</div>
-<div class="getcgpa" style="color: white;"></div>
-</center>
+    <title>Document</title>
 </head>
-<body background="nice.jpg">
-    <script src="index.js"></script>
-    <br><br><br><br><br><br><br><center>
-    <footer>© 2022 Abhiraj Bhosle</footer>
-</center>
+<body >
+   <center>
+    <div class="row">
+    <div class="col col-lg-4">
+      <img class="logo"  height="53px" src="/logo/loficity-logos_transparentt.png" alt="">
+    </div>
+    <div class="col col-lg-1">
+<p class="time"></p>
+      </div>
+    <div class="col col-lg-7 btnmin">
+    <button onClick="changebeatback()"><img  src="https://app.lofi.co/icons/new/prev.svg" alt=""></button>
+    <button class="playbtn" onClick="main()"></button>
+    <button class="playbtn" onClick="changebeatforw()"><img  src="https://app.lofi.co/icons/new/next.svg" alt=""></button>
+    <img src="https://app.lofi.co/icons/controls/volume-down.svg" class="psvg volgrp" alt=""> <input  type="range" oninput="sliderChange(this.value)" min="0" max="100"  class="slider" id="myRange"><img src="/icons/controls/volume-up.svg" class="psvg" alt=""><img src="https://app.lofi.co/icons/controls/volume-up.svg" class="psvg" alt=""></center> 
+</div>
+</div>
+    <div id="mydiv">
+        <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+        <div id="mydivheader">Mixer</div>
+        
+
+
+    <table>
+        <tr>
+            <td>    <label for="mailId[]"> Rain</label></td>
+            <td> <input oninput="onInputrain(this)" class="messageCheckbox" type="checkbox" value="3" name="mailId[]">  <input type="range"oninput="rainvolume(this.value)" min="0" max="100"  class="slider" id="myRange"></td>
+   
+        </tr>
+ <tr>
+    <td><label for="mailId[]"> Nature</label></td>
+ <td><input oninput="onInputnature(this)" class="messageCheckbox" type="checkbox" value="3" name="mailId[]">  <input type="range"oninput="naturevolume(this.value)" min="0" max="100"  class="slider" id="myRange"></td>
+</tr>
+<tr>
+    <td><label for="mailId[]"> Waterfall</label></td>
+ <td><input oninput="onInputwf(this)" class="messageCheckbox" type="checkbox" value="3" name="mailId[]">  <input type="range"oninput="wfvolume(this.value)" min="0" max="100"  class="slider" id="myRange"></td>
+</tr>
+    </table>
+              
+               
+               
+      </div>
+   <script src="index.js"></script>
 </body>
 </html>
