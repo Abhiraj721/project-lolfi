@@ -18,10 +18,10 @@
     <div class="col col-lg-4">
       <img class="logo"  height="53px" src="/logo/loficity-logos_transparentt.png" alt="">
     </div>
-    <div class="col col-lg-1">
+    <div class="col col-lg-2">
 <a href="#" style="text-decoration: none;"><p class="time" onClick="showgreeting()"></p></a>
       </div>
-    <div class="col col-lg-7 btnmin">
+    <div class="col col-lg-6 btnmin">
     <button onClick="changebeatback()"><img  src="https://app.lofi.co/icons/new/prev.svg" alt=""></button>
     <button class="playbtn" onClick="main()"></button>
     <button class="playbtn" onClick="changebeatforw()"><img  src="https://app.lofi.co/icons/new/next.svg" alt=""></button>
@@ -33,6 +33,7 @@
     <button  class="scenes_btn" onClick="scenes()"><img src="https://app.lofi.co/icons/new/menu-scenes.svg" alt=""></button>
 
   </div>
+  
     <div id="mydiv">
         <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
         <div id="mydivheader">Mixer    <a href="#" class="close_mixer" onclick="Hide(mydiv);">X</a></div>         
@@ -55,6 +56,11 @@
 </tr>
     </table>
       </div>
+      <div class="container" style="height: 200px; width:500px;">
+        <b> <h3 id="greet" class="greetings"></h3></b>
+         <h4 class="dayandtime"></h4>
+         <h5 class="quote"></h5>
+       </div>
       <div class="scenes" id="Bar">
         <div id="right">
           <a href="#" onclick="Hide(Bar);">X</a>
@@ -65,11 +71,6 @@
 
          </div>
         </div>
-      </div>
-      <div class="container" style="height: 200px; width:500px;">
-       <b> <h3 id="greet" class="greetings"></h3></b>
-        <h4 class="dayandtime"></h4>
-        <h5 class="quote"></h5>
       </div>
    <script src="index.js"></script>
 </body>

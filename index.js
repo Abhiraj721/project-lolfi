@@ -160,7 +160,11 @@ var month_name=month[date.getMonth()]
 var date_num=date.getDate()
 var currhour=date.getHours()
 var random=Math.floor(Math.random()*12)
-if(isMobileDevice==true)document.querySelector(".container").style.width="240px"
+if(isMobileDevice==true){
+  document.querySelector(".container").style.width="240px"
+document.querySelector(".container").style.height="260px"
+document.querySelector(".container").style.fontSize="10px"
+}
 if(greeting%2!=0){
   document.querySelector(".container").style.backgroundColor="#0b0c0c"
   if(currhour<12)document.querySelector(".container .greetings").innerHTML="Good Morning🌄"
@@ -359,32 +363,32 @@ function dragElement(elmnt) {
 }
 }
 else{
-  window.onload = function() {
-    // find the element that you want to drag.
-    var box = document.getElementById('mydiv');
+  // window.onload = function() {
+  //   // find the element that you want to drag.
+  //   var box = document.getElementById('mydiv');
     
-    /* listen to the touchMove event,
-    every time it fires, grab the location
-    of touch and assign it to box */
+  //   /* listen to the touchMove event,
+  //   every time it fires, grab the location
+  //   of touch and assign it to box */
     
-    box.addEventListener('touchmove', function(e) {
-      // grab the location of touch
-      var touchLocation = e.targetTouches[0];
+  //   box.addEventListener('touchmove', function(e) {
+  //     // grab the location of touch
+  //     var touchLocation = e.targetTouches[0];
       
-      // assign box new coordinates based on the touch.
-      mydiv.style.left = touchLocation.pageX + 'px';
-      mydiv.style.top = touchLocation.pageY + 'px';
-    })
+  //     // assign box new coordinates based on the touch.
+  //     mydiv.style.left = touchLocation.pageX + 'px';
+  //     mydiv.style.top = touchLocation.pageY + 'px';
+  //   })
     
-    /* record the position of the touch
-    when released using touchend event.
-    This will be the drop position. */
+  //   /* record the position of the touch
+  //   when released using touchend event.
+  //   This will be the drop position. */
     
-    box.addEventListener('touchend', function(e) {
-      // current box position.
-      var x = parseInt(mydiv.style.left);
-      var y = parseInt(mydiv.style.top);
-    })
+  //   box.addEventListener('touchend', function(e) {
+  //     // current box position.
+  //     var x = parseInt(mydiv.style.left);
+  //     var y = parseInt(mydiv.style.top);
+  //   })
     
-  }
+  // }
 }
