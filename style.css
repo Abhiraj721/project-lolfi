@@ -28,7 +28,8 @@ body{
   font-family: Roboto,serif;
 }
 .logo{
-  margin-left: -280px;
+  float: left;
+  margin-left: 12px;
   width: 47px;
 }
 .close_mixer{
