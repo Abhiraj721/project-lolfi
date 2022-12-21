@@ -9,6 +9,24 @@ body{
     /* background-attachment: fixed; */
    
 }
+.container{
+  margin: -15%;
+ float: left;
+  color:#fff0f0;
+  background-size: 23px;
+  display: block;
+  opacity: 0.8;
+}
+.container .greetings{
+  font-family: Roboto,serif;
+}
+.container .dayandtime{
+  font-family: Roboto,serif;
+}
+.container .quote{
+  font-style: italic;
+  font-family: Roboto,serif;
+}
 .logo{
   margin-left: -280px;
   width: 47px;

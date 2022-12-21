@@ -19,7 +19,7 @@
       <img class="logo"  height="53px" src="/logo/loficity-logos_transparentt.png" alt="">
     </div>
     <div class="col col-lg-1">
-<p class="time"></p>
+<a href="#" style="text-decoration: none;"><p class="time" onClick="showgreeting()"></p></a>
       </div>
     <div class="col col-lg-7 btnmin">
     <button onClick="changebeatback()"><img  src="https://app.lofi.co/icons/new/prev.svg" alt=""></button>
@@ -66,7 +66,11 @@
          </div>
         </div>
       </div>
-      
+      <div class="container" style="height: 200px; width:500px;">
+       <b> <h3 id="greet" class="greetings"></h3></b>
+        <h4 class="dayandtime"></h4>
+        <h5 class="quote"></h5>
+      </div>
    <script src="index.js"></script>
 </body>
 </html>

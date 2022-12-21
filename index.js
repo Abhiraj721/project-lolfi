@@ -7,6 +7,7 @@ var checkrain=0;
 var checkwf=0;
 var checknature=0;
 var gifcount=0;
+var greeting=0;
 document.querySelector(".playbtn").innerHTML="<img src='https://app.lofi.co/icons/new/play.svg' >"
 var x=new Audio("/beats/beat"+0+".mp3");
 var a=0;
@@ -17,6 +18,7 @@ let details = navigator.userAgent;
 let regexp = /android|iphone|kindle|ipad/i;
 let isMobileDevice = regexp.test(details);
 var gif_arr=["https://i.gifer.com/Mf08.gif","https://i.gifer.com/xK.gif","https://i.gifer.com/fyrV.gif","https://i.gifer.com/7wkh.gif","https://i.gifer.com/EdfH.gif","https://i.gifer.com/2qQQ.gif","https://i.gifer.com/fyrS.gif",]
+let currtime=0;
 if(temp==0)gettime()
 x.addEventListener("ended", function() {
     console.log("um")
@@ -26,6 +28,157 @@ x.addEventListener("ended", function() {
     x=new Audio("/beats/beat"+num+".mp3");
     x.play()
 });
+function showgreeting(){
+  greeting++;
+  var quotes=[
+    {
+        "quote": "Be yourself; everyone else is already taken.",
+        "author": "Oscar Wilde",
+        "profession": "Irish poet",
+        "topics": [
+            "Inspirational",
+            "Advice",
+            "Humor"
+        ]
+    },
+  {
+        "quote": "To live is the rarest thing in the world. Most people exist, that is all.",
+        "author": "Oscar Wilde",
+        "profession": "Irish poet",
+        "topics": [
+            "Philosophy",
+            "Humor"
+        ]
+    },
+    {
+        "quote": "True friends stab you in the front.",
+        "author": "Oscar Wilde",
+        "profession": "Irish poet",
+        "topics": [
+            "Philosophy",
+            "People"
+        ]
+    },
+    {
+        "quote": "Women are made to be Loved, not understood.",
+        "author": "Oscar Wilde",
+        "profession": "Irish poet",
+        "topics": [
+            "Philosophy",
+            "Humor"
+        ]
+    },
+    {
+        "quote": "Be the change that you wish to see in the world.",
+        "author": "Mahatma Gandhi",
+        "profession": "Indian leader",
+        "topics": [
+            "Inspirational",
+            "Philosophy",
+            "Advice"
+        ]
+    },
+    {
+        "quote": "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+        "author": "Mahatma Gandhi",
+        "profession": "Indian leader",
+        "topics": [
+            "Inspirational",
+            "Life",
+            "Advice"
+        ]
+    },
+    {
+        "quote": "No one can make you feel inferior without your consent.",
+        "author": "Eleanor Roosevelt",
+        "profession": "Former First Lady of the United States",
+        "topics": [
+            "Wisdom"
+        ]
+    },
+    {
+        "quote": "Great minds discuss ideas; average minds discuss events; small minds discuss people.",
+        "author": "Eleanor Roosevelt",
+        "profession": "Former First Lady of the United States",
+        "topics": [
+            "Wisdom",
+            "People"
+        ]
+    },
+    {
+        "quote": "Do what you feel in your heart to be right - for you'll be criticized anyway.",
+        "author": "Eleanor Roosevelt",
+        "profession": "Former First Lady of the United States",
+        "topics": [
+            "Wisdom",
+            "Advice"
+        ]
+    },
+    {
+        "quote": "Do one thing every day that scares you.",
+        "author": "Eleanor Roosevelt",
+        "profession": "Former First Lady of the United States",
+        "topics": [
+            "Wisdom",
+            "Life"
+        ]
+    },
+    {
+        "quote": "Darkness cannot drive out darkness: only light can do that. Hate cannot drive out hate; only love can do that.",
+        "author": "Martin Luther King",
+        "profession": "American minister",
+        "topics": [
+            "Inspirational",
+            "Wisdom",
+            "Love"
+        ]
+    },
+    {
+        "quote": "Our lives begin to end the day we become silent about things that matter.",
+        "author": "Martin Luther King",
+        "profession": "American minister",
+        "topics": [
+            "Inspirational",
+            "Life"
+        ]
+    },
+    {
+        "quote": "In the end, we will remember not the words of our enemies, but the silence of our friends.",
+        "author": "Martin Luther King",
+        "profession": "American minister",
+        "topics": [
+            "People",
+            "Life"
+        ]
+    },
+  ]
+  const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var date=new Date();
+  var day=weekday[date.getDay()]
+var month_name=month[date.getMonth()]
+var date_num=date.getDate()
+var currhour=date.getHours()
+var random=Math.floor(Math.random()*12)
+if(greeting%2!=0){
+  document.querySelector(".container").style.backgroundColor="#0b0c0c"
+  if(currhour<12)document.querySelector(".container .greetings").innerHTML="Good Morning🌄"
+else if(currhour<=18){
+  document.querySelector(".container .greetings").innerHTML="Good Afternoon🌇"
+}
+else if(currhour<=21)document.querySelector(".container .greetings").innerHTML="Good Evening🌆"
+else document.querySelector(".container .greetings").innerHTML="Good Night🌉"
+document.querySelector(".dayandtime").innerHTML="Its "+day+" , "+month_name+" "+date_num
+console.log(quotes.length)
+document.querySelector(".quote").innerHTML=quotes[random].quote+"-"+quotes[random].author
+}else{
+   document.querySelector(".container").innerHTML=" <b> <h3 id='greet' class='greetings'></h3></b>"+
+"<h4 class='dayandtime'></h4>"+
+"<h5 class='quote'></h5>"
+document.querySelector(".container").style.backgroundColor=""
+}
+console.log(greeting)
+}
 function scenes_menu(element){
   console.log(element)
  document.querySelector("body").style.backgroundImage="url("+element+")"
@@ -60,6 +213,7 @@ function gettime(){
  var str=""
 if(date.getMinutes()<=9)str="0"
   document.querySelector(".time").innerHTML=time+" : "+str+date.getMinutes()
+  currtime=time+" : "+str+date.getMinutes()
 }
 setInterval(gettime,1000)
 var checkedValue = document.querySelector('.messageCheckbox').checked;
@@ -169,7 +323,7 @@ function dragElement(elmnt) {
     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
+   console.log("d")
   }
 
   function dragMouseDown(e) {
