@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Albert+Sans:wght@300&family=Changa&family=Comfortaa&family=Edu+TAS+Beginner&family=Josefin+Sans:ital,wght@0,300;0,400;1,700&family=Kanit:ital,wght@0,300;1,300&family=Lexend+Deca&family=Rubik:wght@300&family=Silkscreen&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -17,6 +20,7 @@
     </div>
     <div class="col col-lg-1">
 <p class="time"></p>
+<button onClick="changegif()">click</button>
       </div>
     <div class="col col-lg-7 btnmin">
     <button onClick="changebeatback()"><img  src="https://app.lofi.co/icons/new/prev.svg" alt=""></button>
@@ -25,9 +29,14 @@
     <img src="https://app.lofi.co/icons/controls/volume-down.svg" class="psvg volgrp" alt=""> <input  type="range" oninput="sliderChange(this.value)" min="0" max="100"  class="slider" id="myRange"><img src="/icons/controls/volume-up.svg" class="psvg" alt=""><img src="https://app.lofi.co/icons/controls/volume-up.svg" class="psvg" alt=""></center> 
 </div>
 </div>
+<div class="icon-bar">
+    <button  class="mixer" onClick="mixer()"><img src="https://app.lofi.co/icons/new/menu-mixer.svg" alt=""></button>
+    <button  class="scenes_btn" onClick="scenes()"><img src="https://app.lofi.co/icons/new/menu-scenes.svg" alt=""></button>
+
+  </div>
     <div id="mydiv">
         <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
-        <div id="mydivheader">Mixer</div>
+        <div id="mydivheader">Mixer    <a href="#" class="close_mixer" onclick="Hide(mydiv);">X</a></div>         
         
 
 
@@ -46,10 +55,19 @@
  <td><input oninput="onInputwf(this)" class="messageCheckbox" type="checkbox" value="3" name="mailId[]">  <input type="range"oninput="wfvolume(this.value)" min="0" max="100"  class="slider" id="myRange"></td>
 </tr>
     </table>
-              
-               
-               
       </div>
+      <div class="scenes" id="Bar">
+        <div id="right">
+          <a href="#" onclick="Hide(Bar);">X</a>
+        </div>
+        <div id="left">
+         <div class="row" id="gifs">
+          <h4>Scenes</h4>
+
+         </div>
+        </div>
+      </div>
+      
    <script src="index.js"></script>
 </body>
 </html>

@@ -1,16 +1,24 @@
 body{
-    background-image: url("https://i.gifer.com/2swA.gif");
+    background-image: url("https://i.gifer.com/3or4.gif");
     height: 100vh;
     padding:0;
     margin:0;
-background-repeat: no-repeat;
-background-size: 100%;
+    width: 99%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     /* background-attachment: fixed; */
    
 }
 .logo{
   margin-left: -280px;
   width: 47px;
+}
+.close_mixer{
+  float: right;
+  width: 30px;
+  height: 20px;
+  text-align: center;
+ text-decoration: none;
 }
 .volgrp{
   background-color: #000000;
@@ -42,13 +50,92 @@ background-size: 100%;
     text-align: center;
  
   }
- 
+  .icon-bar {
+    position: relative;
+    top: 30%;
+    float: right;
+margin-right:-8px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  /* Style the icon bar links */
+  .icon-bar button {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+  }
+  
+  /* Style the social media icons with color, if you want */
+  .icon-bar button:hover {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .mixer {
+    background-color: #000000;
+    opacity: 0.7;
+  }
+  
+  .scenes_btn {
+    background: #000000;
+    opacity: 0.7;
+  }
+  
+  .google {
+    background: #dd4b39;
+    color: rgb(190, 56, 56);
+  }
+  
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .youtube {
+    background: #bb0000;
+    color: white;
+  }
+  .scenes {
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding:4px;
+  }
+  .scenes_gif{
+height: 200x;
+width: 280px;
+  }
+  #left {
+    overflow: hidden;
+    text-align: center;
+    height:530px;
+  }
+  #right {
+    float: right;
+    width: 30px;
+    height: 20px;
+    text-align: center;
+  }
+  .scenes a {
+     color: #FFFFFF;
+     text-decoration: none;
+  }
+  .scenes a:hover {
+     text-decoration:underline;
+  }
+  
   
   #mydivheader {
     padding: 10px;
     cursor: move;
     z-index: 10;
-    background-color: #2196F3;
+    background-color:black;
+    backdrop-filter: blur(9px) ;
     color: #fff;
   }
   input[type=range] {
