@@ -192,7 +192,7 @@ function scenes_menu(element){
 }
 var gif_arr=["https://i.gifer.com/Mf08.gif","https://i.gifer.com/xK.gif","https://i.gifer.com/fyrS.gif","https://i.gifer.com/58yR.gif"]
 for (let i = 1; i < 10; i++) {
-  document.getElementById("gifs").innerHTML+="<div class='col col-lg-4 col-sm-6' id='scenes_id'><img id='scenes01' onClick='scenes_menu(this.src)' class='scenes_gif' src='/bg/img"+i+".gif' ></div> "
+  document.getElementById("gifs").innerHTML+="<div class='col col-lg-4 col-sm-6' id='scenes_id'><a href='#'><img id='scenes01' onClick='scenes_menu(this.src)' class='scenes_gif' src='/bg/img"+i+".gif' ></a></div> "
  
   
 }
