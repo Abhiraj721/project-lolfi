@@ -25,10 +25,10 @@
     <button onClick="changebeatback()"><img  src="https://app.lofi.co/icons/new/prev.svg" alt=""></button>
     <button class="playbtn" onClick="main()"></button>
     <button class="playbtn" onClick="changebeatforw()"><img  src="https://app.lofi.co/icons/new/next.svg" alt=""></button><span id="br"></span>
-    <img src="https://app.lofi.co/icons/controls/volume-down.svg" class="psvg volgrp" alt=""> <input  type="range" oninput="sliderChange(this.value)" min="0" max="100"  class="slider" id="myRange"><img src="/icons/controls/volume-up.svg" class="psvg" alt=""><img src="https://app.lofi.co/icons/controls/volume-up.svg" class="psvg" alt=""></center> 
+    <!-- <img src="https://app.lofi.co/icons/controls/volume-down.svg" class="psvg volgrp" alt=""> <input  type="range" oninput="sliderChange(this.value)" min="0" max="100"  class="slider" id="myRange"><img src="/icons/controls/volume-up.svg" class="psvg" alt=""><img src="https://app.lofi.co/icons/controls/volume-up.svg" class="psvg" alt=""></center>  -->
 </div>
 </div>
-<div class="icon-bar">
+<div class="icon-bar" style="position: sticky;">
     <button  class="mixer" onClick="mixer()"><img src="https://app.lofi.co/icons/new/menu-mixer.svg" alt=""></button>
     <button  class="scenes_btn" onClick="scenes()"><img src="https://app.lofi.co/icons/new/menu-scenes.svg" alt=""></button>
 
@@ -41,6 +41,7 @@
 
 
     <table>
+     <h4 class="getme"></h4>
         <tr>
             <td>    <label for="mailId[]"> Rain</label></td>
             <td> <input oninput="onInputrain(this)" class="messageCheckbox" type="checkbox" value="3" name="mailId[]">  <input type="range"oninput="rainvolume(this.value)" min="0" max="100"  class="slider" id="myRange"></td>
