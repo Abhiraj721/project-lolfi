@@ -25,6 +25,7 @@ document.querySelector(".container").style.height="260px"
 document.querySelector(".container").style.fontSize="10px"
 document.querySelector(".getme").innerHTML+='<td><img src="https://app.lofi.co/icons/controls/volume-down.svg" alt=""> </td><td><input  type="range" oninput="sliderChange(this.value)" min="0" max="100"  class="slider" id="myRange"><img src="/icons/controls/volume-up.svg" class="psvg" alt=""><img src="https://app.lofi.co/icons/controls/volume-up.svg" class="psvg" alt=""></center> </td>'
 // document.querySelector(".logo").style.marginLeft="-40px";
+document.querySelector(".btnmin button img").style.width="7px"
 }else{
   document.querySelector(".btnmin").innerHTML+='<img src="https://app.lofi.co/icons/controls/volume-down.svg" class="psvg volgrp" alt=""> <input  type="range" oninput="sliderChange(this.value)" min="0" max="100"  class="slider" id="myRange"><img src="/icons/controls/volume-up.svg" class="psvg" alt=""><img src="https://app.lofi.co/icons/controls/volume-up.svg" class="psvg" alt=""></center> '
 }
