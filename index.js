@@ -40,12 +40,6 @@ for (let i = 1; i < 10; i++) {
 }
 document.getElementById("Bar").style.visibility="hidden";
 document.getElementById("mydiv").style.visibility="hidden";
-function changegif(){
-  var gif_arr=["https://i.gifer.com/Mf08.gif","https://i.gifer.com/xK.gif","https://i.gifer.com/fyrS.gif","https://i.gifer.com/58yR.gif"]
-  document.body.style.backgroundImage="url("+gif_arr[gifcount]+")"
-  console.log(gifcount)
-  gifcount++;
-}
 document.querySelector("body").style.fontFamily="'Silkscreen', cursive";
 function Hide(HideID) 
 {
