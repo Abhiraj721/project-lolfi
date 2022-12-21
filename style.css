@@ -58,9 +58,7 @@ body{
   opacity: 0.7;
  height: 29px;
 }
-.btnmin button img{
-  width: 14px;
-}
+
 #mydiv {
     position: absolute;
     z-index: 9;

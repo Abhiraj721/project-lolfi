@@ -8,7 +8,6 @@ var checkwf=0;
 var checknature=0;
 var gifcount=0;
 var greeting=0;
-document.querySelector(".playbtn").innerHTML="<img src='https://app.lofi.co/icons/new/play.svg' >"
 var x=new Audio("/beats/beat"+0+".mp3");
 var a=0;
 var temp=0;
@@ -17,15 +16,20 @@ let scenes_visi=0;
 let details = navigator.userAgent;
 let regexp = /android|iphone|kindle|ipad/i;
 let isMobileDevice = regexp.test(details);
+document.querySelector(".playbtn").innerHTML="<img class='k' src='https://app.lofi.co/icons/new/play.svg' >"
+if(isMobileDevice)document.querySelector(".k").style.width="8px"
 var gif_arr=["https://i.gifer.com/Mf08.gif","https://i.gifer.com/xK.gif","https://i.gifer.com/fyrV.gif","https://i.gifer.com/7wkh.gif","https://i.gifer.com/EdfH.gif","https://i.gifer.com/2qQQ.gif","https://i.gifer.com/fyrS.gif",]
 let currtime=0;
 if(isMobileDevice==true){
+  document.querySelector(".kkk").style.width="8px"
   document.querySelector(".container").style.width="240px"
 document.querySelector(".container").style.height="260px"
 document.querySelector(".container").style.fontSize="10px"
 document.querySelector(".getme").innerHTML+='<td><img src="https://app.lofi.co/icons/controls/volume-down.svg" alt=""> </td><td><input  type="range" oninput="sliderChange(this.value)" min="0" max="100"  class="slider" id="myRange"><img src="/icons/controls/volume-up.svg" class="psvg" alt=""><img src="https://app.lofi.co/icons/controls/volume-up.svg" class="psvg" alt=""></center> </td>'
 // document.querySelector(".logo").style.marginLeft="-40px";
-document.querySelector(".btnmin button img").style.width="13px"
+document.querySelector(".btnmin button img").style.width="8px"
+document.querySelector(".k").style.width="8px"
+
 }else{
   document.querySelector(".btnmin").innerHTML+='<img src="https://app.lofi.co/icons/controls/volume-down.svg" class="psvg volgrp" alt=""> <input  type="range" oninput="sliderChange(this.value)" min="0" max="100"  class="slider" id="myRange"><img src="/icons/controls/volume-up.svg" class="psvg" alt=""><img src="https://app.lofi.co/icons/controls/volume-up.svg" class="psvg" alt=""></center> '
 }
@@ -303,7 +307,8 @@ console.log(a);
 if(a%2==0)isplaying=true
     if(isplaying==false){
         console.log("ddddd")
-        document.querySelector(".playbtn").innerHTML="<img src='https://app.lofi.co/icons/new/pause.svg' >"
+        document.querySelector(".playbtn").innerHTML="<img class='k' src='https://app.lofi.co/icons/new/pause.svg' >"
+        if(isMobileDevice)document.querySelector(".k").style.width="8px"
       x.play();
       
     }
@@ -319,7 +324,10 @@ function sliderChange(val) {
     }
 function audiopause(){
     x.pause();
-    document.querySelector(".playbtn").innerHTML="<img src='https://app.lofi.co/icons/new/play.svg' >"
+    
+    document.querySelector(".playbtn").innerHTML="<img class='k' src='https://app.lofi.co/icons/new/play.svg' >"
+    if(isMobileDevice)document.querySelector(".k").style.width="8px"
+
     isplaying=false
 }
 ////dragelement
