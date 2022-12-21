@@ -19,6 +19,11 @@ let regexp = /android|iphone|kindle|ipad/i;
 let isMobileDevice = regexp.test(details);
 var gif_arr=["https://i.gifer.com/Mf08.gif","https://i.gifer.com/xK.gif","https://i.gifer.com/fyrV.gif","https://i.gifer.com/7wkh.gif","https://i.gifer.com/EdfH.gif","https://i.gifer.com/2qQQ.gif","https://i.gifer.com/fyrS.gif",]
 let currtime=0;
+if(isMobileDevice==true){
+  document.querySelector(".container").style.width="240px"
+document.querySelector(".container").style.height="260px"
+document.querySelector(".container").style.fontSize="10px"
+}
 if(temp==0)gettime()
 x.addEventListener("ended", function() {
     console.log("um")
@@ -160,11 +165,6 @@ var month_name=month[date.getMonth()]
 var date_num=date.getDate()
 var currhour=date.getHours()
 var random=Math.floor(Math.random()*12)
-if(isMobileDevice==true){
-  document.querySelector(".container").style.width="240px"
-document.querySelector(".container").style.height="260px"
-document.querySelector(".container").style.fontSize="10px"
-}
 if(greeting%2!=0){
   document.querySelector(".container").style.backgroundColor="#0b0c0c"
   if(currhour<12)document.querySelector(".container .greetings").innerHTML="Good Morning🌄"
