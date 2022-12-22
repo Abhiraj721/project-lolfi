@@ -29,6 +29,10 @@ document.querySelector(".getme").innerHTML+='<td><img src="https://app.lofi.co/i
 // document.querySelector(".logo").style.marginLeft="-40px";
 document.querySelector(".btnmin button img").style.width="8px"
 document.querySelector(".k").style.width="8px"
+document.querySelector(".scenes").style.width="299px"
+document.querySelector(".scenes").style.bottom="200px"
+document.querySelector(".scenes").style.height="330px"
+
 
 }else{
   document.querySelector(".btnmin").innerHTML+='<img src="https://app.lofi.co/icons/controls/volume-down.svg" class="psvg volgrp" alt=""> <input  type="range" oninput="sliderChange(this.value)" min="0" max="100"  class="slider" id="myRange"><img src="/icons/controls/volume-up.svg" class="psvg" alt=""><img src="https://app.lofi.co/icons/controls/volume-up.svg" class="psvg" alt=""></center> '
@@ -201,7 +205,7 @@ function scenes_menu(element){
 }
 var gif_arr=["https://i.gifer.com/Mf08.gif","https://i.gifer.com/xK.gif","https://i.gifer.com/fyrS.gif","https://i.gifer.com/58yR.gif"]
 for (let i = 1; i < 10; i++) {
-  document.getElementById("gifs").innerHTML+="<div class='col col-lg-4 col-sm-6' id='scenes_id'><a href='#'><img id='scenes01' onClick='scenes_menu(this.src)' class='scenes_gif' src='/bg/img"+i+".gif' ></a></div> "
+  document.getElementById("gifs").innerHTML+="<div class='col col-lg-4 col-xs-6' id='scenes_id'><a href='#'><img id='scenes01' onClick='scenes_menu(this.src)' class='scenes_gif' src='/bg/img"+i+".gif' ></a></div> "
  
   
 }
@@ -298,6 +302,7 @@ function changebeatforw(){
     x.pause()
     x=new Audio("/beats/beat"+num+".mp3");
     x.play()
+
 }
 
 function main(){
