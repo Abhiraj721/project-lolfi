@@ -6,6 +6,9 @@ body{
     width: 99%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    background-color: null !important;
+    background-position: null !important;
+    background-repeat: repeat !important;
     /* background-attachment: fixed; */
    
 }

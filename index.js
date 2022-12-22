@@ -31,7 +31,7 @@ document.querySelector(".btnmin button img").style.width="8px"
 document.querySelector(".k").style.width="8px"
 document.querySelector(".scenes").style.width="299px"
 document.querySelector(".scenes").style.bottom="200px"
-document.querySelector(".scenes").style.height="330px"
+document.querySelector(".scenes").style.height="430px"
 
 
 }else{
