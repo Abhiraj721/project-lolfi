@@ -182,11 +182,11 @@ var currhour=date.getHours()
 var random=Math.floor(Math.random()*12)
 if(greeting%2!=0){
   document.querySelector(".container").style.backgroundColor="#0b0c0c"
-  if(currhour<12)document.querySelector(".container .greetings").innerHTML="Good Morning🌄"
-else if(currhour<=18){
+  if(currhour>=6 && currhour<12)document.querySelector(".container .greetings").innerHTML="Good Morning🌄"
+else if(currhour>=12 && currhour<=18){
   document.querySelector(".container .greetings").innerHTML="Good Afternoon🌇"
 }
-else if(currhour<=21)document.querySelector(".container .greetings").innerHTML="Good Evening🌆"
+else if(currhour>=18 && currhour<=21)document.querySelector(".container .greetings").innerHTML="Good Evening🌆"
 else document.querySelector(".container .greetings").innerHTML="Good Night🌉"
 document.querySelector(".dayandtime").innerHTML="Its "+day+" , "+month_name+" "+date_num
 console.log(quotes.length)
