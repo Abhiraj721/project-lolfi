@@ -8,6 +8,7 @@ body{
     background-size: 100% 100%;
     background-color: null !important;
     background-position: null !important;
+    position: sticky;
     background-repeat: repeat !important;
     /* background-attachment: fixed; */
    
