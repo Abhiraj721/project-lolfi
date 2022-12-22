@@ -32,7 +32,8 @@ document.querySelector(".k").style.width="8px"
 document.querySelector(".scenes").style.width="299px"
 document.querySelector(".scenes").style.bottom="330px"
 document.querySelector(".scenes").style.height="290px"
-document.querySelector("body").style.backgroundSize="auto"
+document.querySelector("body").style.backgroundSize="150% 120%"
+
 
 
 }else{
